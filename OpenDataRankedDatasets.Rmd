@@ -1,0 +1,54 @@
+---
+title: "RankedDataSetsOPENDATA"
+author: "Jessica Wheeler"
+date: "2/9/2017"
+output: html_document
+---
+
+## Raked Open Data Datasets
+
+
+```{r, results="hide"}
+#Load required packages:
+require("dplyr")
+require("ggplot2")
+require("repmis")
+
+#Set working directory
+setwd('/Users/JessicaSibal/Dropbox/OPENDATA')
+
+#Loading the data into R:
+data <- read.csv("/Users/JessicaSibal/Dropbox/OPENDATA/RankedOpenDatasets - Sheet1.csv", header=TRUE)
+
+```
+
+
+
+
+
+```{r}
+counts <- table(data$Subject)
+barplot(counts, main="Open Data Datasets", xlab="Number of Hits")
+```
+
+## Plots
+
+Plots to make:
+
+- Counts of all datasets by subject
+- Top 5 ranked datasets (subject) by # of hits
+  - Top 5 actual titles of datasets
+- Top 5 Cities with highest # of hits
+
+
+## Conclusion
+
+
+
+
+
+
+* Last Update: 2.8.17
+
+
+
